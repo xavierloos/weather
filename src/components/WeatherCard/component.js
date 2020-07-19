@@ -3,12 +3,12 @@ import styled from "@emotion/styled";
 import Location from "./Location";
 import Icon from "./Icon";
 import Condition from "./Condition";
-const WeatherCard = (props) => {
+const WeatherCard = ({ temp, condition, city, country }) => {
   let highColor = 0;
   let lowColor = 0;
   let bg = null;
-  if (props.temp > 12) {
-    highColor = (1 - (props.temp - 12) / 28) * 255;
+  if (temp > 12) {
+    highColor = (1 - (temp - 12) / 28) * 255;
     lowColor = highColor - 150;
     bg = `linear-gradient(
         to top,
@@ -16,8 +16,8 @@ const WeatherCard = (props) => {
         rgb(255, ${lowColor}, 0)
         );
     `;
-  } else if (props.temp <= 12) {
-    highColor = (1 - (props.temp + 20) / 32) * 255;
+  } else if (temp <= 12) {
+    highColor = (1 - (temp + 20) / 32) * 255;
     lowColor = highColor - 150;
     bg = `linear-gradient(
         to top,
@@ -38,9 +38,9 @@ const WeatherCard = (props) => {
   `;
   return (
     <Card>
-      <Location />
-      <Icon />
-      <Condition />
+      <Location city={city} country={country} />
+      <Icon condition={condition} />
+      <Condition temp={temp} condition={condition} />
     </Card>
   );
 };

@@ -1,0 +1,15 @@
+{
+  "folders": [
+	{
+		"name": "weather",
+		"path": ".."
+	},
+	{
+		"name": "Weather Icons",
+		"path": "../../Downloads/Weather Icons"
+	}
+],
+  "settings": {
+    "git.ignoreLimitWarning": true
+  }
+}
