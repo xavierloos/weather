@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import WeatherCard from "./WeatherCard/component";
+import PuffLoader from 'react-spinners/PuffLoader';
 
 const WeatherEngine = ({ location }) => {
     const [query, setQuery] = useState("");
@@ -58,7 +59,9 @@ const WeatherEngine = ({ location }) => {
 
                 </div>
             ) : loading ? (
-                <div style={{ color: 'black' }}>Loading</div>
+                <div style={{ width: '200px', height: '240px', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'black' }}>
+                    <PuffLoader />
+                </div>
             ) : !loading & error ? (
                 <div style={{ color: 'black' }}>
                     There has been an error<br />
