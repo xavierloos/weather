@@ -27,7 +27,7 @@ const Condition = ({ temp, condition }) => {
     <>
       {/* <Temp>{temp}c</Temp> */}
       <div style={{ fontSize: '2rem' }}>
-        <Reel theme={reelStyle} text={`${temp}C`} />
+        <Reel theme={reelStyle} text={`${temp}°C`} />
       </div>
 
       <State>{condition}</State>

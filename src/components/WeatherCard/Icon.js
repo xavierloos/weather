@@ -3,8 +3,10 @@ import styled from "@emotion/styled";
 
 const Icon = (props) => {
   const Icon = styled.img`
-    width: 40%;
+    width: auto;
     margin: auto;
+    height:auto;
+    max-height: 80px;
   `;
   var icon = "";
   switch (props.condition) {

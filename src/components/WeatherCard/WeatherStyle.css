@@ -1,0 +1,50 @@
+.locationWrapper{
+    display: flex;
+    align-items: flex-end;
+}
+.weatherWrapper{
+    width: 70%;
+    max-height: 150px;
+    height: 150px;
+    margin:20px auto;
+    background:rgb(255 255 255 / 12%); 
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    padding:1em;
+    justify-content: space-between;
+}
+.weatherCondition{
+    display: flex;
+    flex-direction: column;
+    margin: auto 2em;
+    text-align: center;
+}
+.inputLocation{
+    background: transparent;
+    border-right: 0px !important;
+    border: 2px solid white;
+    font-size: 20px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    height: 44px;
+    padding-left: 10px;
+    outline: none;
+    position: absolute;
+}
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+button{
+    border: none;
+    border-radius: 50%;
+    min-width: 50px;
+    min-height: 50px;
+    text-align: center;
+    background: white;
+    font-weight: bolder;
+    position: relative;
+    left: 200px;
+}

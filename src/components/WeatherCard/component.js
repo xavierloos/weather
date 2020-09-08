@@ -4,7 +4,10 @@ import Location from "./Location";
 import Icon from "./Icon";
 import Condition from "./Condition";
 import { motion } from "framer-motion";
-const WeatherCard = ({ temp, condition, city, country, getWeather }) => {
+import './WeatherStyle.css';
+import RestaurantCard from '../RestaurantsCard/RestaurantCard';
+
+const WeatherCard = ({ temp, condition, city, country, getWeather, name, getResto }) => {
   let highColor = 0;
   let lowColor = 0;
   let bg = null;
@@ -28,22 +31,28 @@ const WeatherCard = ({ temp, condition, city, country, getWeather }) => {
     `;
   }
 
-  const Card = styled.div`
-    margin: 10px auto;
+  const WeatherColorBg = styled.div`
     background: ${bg};
-    width: 200px;
-    height: auto;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
   `;
+
   return (
     <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }}>
-      <Card>
-        <Location getWeather={getWeather} city={city} country={country} />
-        <Icon condition={condition} />
-        <Condition temp={temp} condition={condition} />
-      </Card>
+      <WeatherColorBg>
+        <div className='weatherWrapper'>
+          <div className='locationWrapper'>
+            <Location getWeather={getWeather} city={city} country={country} />
+          </div>
+          <div className='weatherCondition'>
+            <Icon condition={condition} />
+            <Condition temp={temp} condition={condition} />
+          </div>
+        </div>
+        <RestaurantCard />
+      </WeatherColorBg>
     </motion.div>
   );
 };

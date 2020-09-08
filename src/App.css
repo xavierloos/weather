@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
-.App {
+AppBg {
   text-align: center;
   display: flex;
+  flex-direction: column;
+  
 }
