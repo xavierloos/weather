@@ -21,14 +21,14 @@ const WeatherEngine = ({ location }) => {
 //  console.log(resto);
     // Connecting to the weather API
     // AWAIT word help to wait for the data to pass to the var
-    // const apiKey = 'F6W2LQWPM-wPR6w1irLXwCDNyQH6of-g2cP7W2-mhwwdcg0hOJWRhP49YV9Q7kbiPJ59g-n5CsgagiZlDPE07M3RgyqgU9vuFfL7fxjJhK4bwpk9ZtAdIgtG88U-X3Yx';
+    
     const getWeather = async q => {
         setQuery('');
         // console.log(q);
         setLoading(true);
         try {
             const apiRes = await fetch(
-                `http://api.openweathermap.org/data/2.5/weather?q=${q}&units=metric&APPID=9ec9591a31e3be7446a43513c920d793`
+                `http://api.openweathermap.org/data/2.5/weather?q=${q}&units=metric&APPID=323252`
             );
             // const apiRestaurant = await fetch(
             //     `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${q}`, {
